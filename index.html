@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Flash Maths">
+  <meta name="theme-color" content="#6a5cff">
+  <title>Flash Maths</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bg"></div>
+
+  <main id="app">
+    <section id="v-home" class="view"></section>
+    <section id="v-chapters" class="view" hidden></section>
+    <section id="v-stats" class="view" hidden></section>
+    <section id="v-settings" class="view" hidden></section>
+    <section id="v-session" class="view" hidden></section>
+  </main>
+
+  <nav id="tabs">
+    <button data-v="home" class="on"><span>🏠</span>Accueil</button>
+    <button data-v="chapters"><span>📚</span>Chapitres</button>
+    <button data-v="stats"><span>🏆</span>Progrès</button>
+    <button data-v="settings"><span>⚙️</span>Paramètres</button>
+  </nav>
+
+  <canvas id="fx"></canvas>
+  <div id="toast"></div>
+  <div id="modal" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" defer></script>
+  <script src="cards.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
